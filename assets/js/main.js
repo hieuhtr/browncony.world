@@ -333,7 +333,7 @@
             var exifData = {};
 	    
 	    if (EXIF.getTag(img, "UserComment") !== undefined) {
-		exifData.model = EXIF.getTag(img, "UserComment");
+		exifData.usercomment = EXIF.getTag(img, "UserComment");
 	    }
 
             if (EXIF.getTag(img, "Model") !== undefined) {
