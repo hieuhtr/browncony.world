@@ -310,8 +310,8 @@
             var exif = fetchExifData(img);
             var template = '';
             for (var info in exif) {
-		if (info === "creator") {
-		    template += '<i class="fa fa-info-circle" aria-hidden="true"></i> ' + exif["creator"] + '&nbsp;&nbsp;';
+		if (info === "usercomment") {
+		    template += '<i class="fa fa-info-circle" aria-hidden="true"></i> ' + exif["usercomment"] + '&nbsp;&nbsp;';
 		}
                 if (info === "model") {
                     template += '<i class="fa fa-camera-retro" aria-hidden="true"></i> ' + exif["model"] + '&nbsp;&nbsp;';
@@ -332,8 +332,8 @@
         function fetchExifData(img) {
             var exifData = {};
 	    
-	    if (EXIF.getTag(img, "Creator") !== undefined) {
-		exifData.model = EXIF.getTag(img, "Creator");
+	    if (EXIF.getTag(img, "UserComment") !== undefined) {
+		exifData.model = EXIF.getTag(img, "UserComment");
 	    }
 
             if (EXIF.getTag(img, "Model") !== undefined) {
